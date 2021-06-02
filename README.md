@@ -4,4 +4,4 @@
 
 ##Both are implemented with THML and CSS and are responsive
 
-## Deployed at (https://odrobcha.github.io/end-of-field-challenge-new/)
+### Deployed at (https://odrobcha.github.io/end-of-field-challenge-new/)
