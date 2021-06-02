@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy&display=swap");
+header {
+  height: 60px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 100%;
+  grid-auto-flow: row;
+  justify-items: center;
+  align-items: center;
+  background-color: #525252;
+  color: #f4f4f4; }
+
+header a, header a:visited, header a:focus {
+  color: #f4f4f4;
+  text-decoration: none;
+  font-weight: bold; }
+
+.active {
+  text-decoration: underline; }
+
+.simple {
+  font-family: 'Open Sans', sans-serif;
+  padding: 90px 5%;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  grid-template-columns: 100%;
+  justify-content: center;
+  color: #4a4a4a; }
+  .simple h1 {
+    font-size: 32px;
+    margin: 40px 0;
+    line-height: 2em; }
+  .simple nav {
+    margin: 40px 0;
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: repeat(6, 180px);
+    grid-auto-flow: row;
+    margin: 40px 0; }
+    .simple nav a, .simple nav a:visited, .simple nav a:focus {
+      text-decoration: none;
+      color: #4a4a4a;
+      font-weight: bolder;
+      font-size: 24px;
+      display: grid;
+      grid-template-rows: 100%;
+      grid-template-columns: 120px 50px;
+      grid-auto-flow: row;
+      align-items: center; }
+    .simple nav a span {
+      justify-self: end; }
+    .simple nav .round {
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: grid;
+      justify-items: center;
+      align-items: center; }
+    .simple nav .round.inactive {
+      display: none; }
+    .simple nav .round.yellow {
+      background-color: #fef8bc; }
+    .simple nav .round.green {
+      background-color: #7eeedf; }
+  .simple footer {
+    margin: 40px 0; }
+    .simple footer h2 {
+      font-weight: bolder; }
+    .simple footer a, .simple footer a:visited, .simple footer a:focus {
+      text-decoration: none;
+      color: #4a4a4a; }
+    .simple footer .bold {
+      font-weight: bolder;
+      font-size: 24px; }
+    .simple footer span {
+      margin: 0 10px 0 0; }
+  @media only screen and (min-width: 800px) and (max-width: 1100px) {
+    .simple nav {
+      grid-template-columns: repeat(6, 130px); }
+      .simple nav .round {
+        width: 40px;
+        height: 40px; }
+    .simple nav a {
+      grid-template-columns: 90px 40px;
+      font-size: 18px; } }
+  @media only screen and (min-width: 0px) and (max-width: 799px) {
+    .simple {
+      padding: 90px 1%; }
+      .simple nav {
+        grid-template-columns: repeat(3, 140px);
+        grid-template-rows: 60px 60px; }
+        .simple nav .round {
+          width: 40px;
+          height: 40px; }
+      .simple nav a {
+        grid-template-columns: 90px 40px;
+        font-size: 18px; } }
+
+.complex {
+  display: grid;
+  grid-template-rows: 100%;
+  grid-template-columns: 100vw 100vw;
+  grid-auto-flow: column;
+  box-sizing: border-box;
+  background-color: #f3f0ea;
+  height: 100vh;
+  color: white; }
+  .complex .item {
+    max-width: 100vw;
+    max-height: 100vh;
+    height: 100vh;
+    box-sizing: border-box;
+    border: 10px solid #f3f0ea; }
+  .complex .item-left {
+    background-color: #282934;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 65% 35%;
+    grid-auto-flow: column;
+    justify-items: center;
+    font-family: 'Sorts Mill Goudy', serif; }
+    .complex .item-left .title {
+      align-self: end; }
+    .complex .item-left h1, .complex .item-left h2 {
+      font-size: 80px;
+      margin-bottom: 60px;
+      text-align: center;
+      padding: 0 25%; }
+    .complex .item-left h2 {
+      margin-bottom: 0;
+      font-size: 140px;
+      transform: rotate(180deg);
+      padding-top: 40px; }
+    .complex .item-left a {
+      color: white;
+      height: 60px;
+      text-decoration: none;
+      border: 2px solid white;
+      padding: 30px 60px;
+      font-size: 26px;
+      text-transform: uppercase;
+      display: grid;
+      align-items: center;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: bolder; }
+  .complex .item-right {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 70% 30%;
+    grid-auto-flow: column;
+    grid-row-gap: 10px; }
+    .complex .item-right .pict {
+      width: 100%;
+      height: 100%;
+      background-image: url("img/complex.png");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat; }
+    .complex .item-right .text {
+      width: 100%;
+      height: 100%;
+      background-color: #aa714e;
+      font-family: 'Open Sans', sans-serif;
+      display: grid;
+      align-items: center;
+      font-size: 30px;
+      padding: 0 20%;
+      box-sizing: border-box;
+      line-height: 2em; }
+  @media only screen and (min-width: 750px) and (max-width: 1300px) {
+    .complex .item-left h1, .complex .item-left h2 {
+      padding: 0 15%; }
+    .complex .item-left h2 {
+      padding-top: 40px; }
+    .complex .item-left h1 {
+      font-size: 60px; }
+    .complex .item-left a {
+      height: 50px;
+      border: 2px solid white;
+      padding: 20px 40px;
+      font-size: 22px; } }
+  @media only screen and (min-width: 0px) and (max-width: 749px) {
+    .complex .item-left h1, .complex .item-left h2 {
+      padding: 0 5%; }
+    .complex .item-left h2 {
+      font-size: 100px;
+      padding-top: 40px; }
+    .complex .item-left h1 {
+      font-size: 46px; }
+    .complex .item-left a {
+      height: 30px;
+      border: 2px solid white;
+      padding: 20px 40px;
+      font-size: 20px; } }
+  @media only screen and (min-width: 450px) and (max-width: 800px) {
+    .complex .item-right .text {
+      padding: 0 10%;
+      line-height: 1.8em;
+      font-size: 24px; } }
+  @media only screen and (min-width: 0px) and (max-width: 449px) {
+    .complex .item-right .text {
+      padding: 0 5%;
+      font-size: 22px;
+      line-height: 1.5em; } }
+
+/*# sourceMappingURL=style.css.map */
