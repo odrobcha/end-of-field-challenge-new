@@ -19,84 +19,27 @@ header a, header a:visited, header a:focus {
 .active {
   text-decoration: underline; }
 
-.simple {
-  font-family: 'Open Sans', sans-serif;
-  padding: 90px 5%;
-  box-sizing: border-box;
+.simple .simple-container {
+  max-width: 500px;
   display: grid;
-  grid-template-rows: repeat(3, auto);
+  grid-template-rows: repeat(4, auto);
   grid-template-columns: 100%;
-  justify-content: center;
-  color: #4a4a4a; }
-  .simple h1 {
-    font-size: 32px;
-    margin: 40px 0;
-    line-height: 2em; }
-  .simple nav {
-    margin: 40px 0;
-    display: grid;
-    grid-template-rows: 100%;
-    grid-template-columns: repeat(6, 180px);
-    grid-auto-flow: row;
-    margin: 40px 0; }
-    .simple nav a, .simple nav a:visited, .simple nav a:focus {
-      text-decoration: none;
-      color: #4a4a4a;
-      font-weight: bolder;
-      font-size: 24px;
-      display: grid;
-      grid-template-rows: 100%;
-      grid-template-columns: 120px 50px;
-      grid-auto-flow: row;
-      align-items: center; }
-    .simple nav a span {
-      justify-self: end; }
-    .simple nav .round {
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
-      display: grid;
-      justify-items: center;
-      align-items: center; }
-    .simple nav .round.inactive {
-      display: none; }
-    .simple nav .round.yellow {
-      background-color: #fef8bc; }
-    .simple nav .round.green {
-      background-color: #7eeedf; }
-  .simple footer {
-    margin: 40px 0; }
-    .simple footer h2 {
-      font-weight: bolder; }
-    .simple footer a, .simple footer a:visited, .simple footer a:focus {
-      text-decoration: none;
-      color: #4a4a4a; }
-    .simple footer .bold {
-      font-weight: bolder;
-      font-size: 24px; }
-    .simple footer span {
-      margin: 0 10px 0 0; }
-  @media only screen and (min-width: 800px) and (max-width: 1100px) {
-    .simple nav {
-      grid-template-columns: repeat(6, 130px); }
-      .simple nav .round {
-        width: 40px;
-        height: 40px; }
-    .simple nav a {
-      grid-template-columns: 90px 40px;
-      font-size: 18px; } }
-  @media only screen and (min-width: 0px) and (max-width: 799px) {
-    .simple {
-      padding: 90px 1%; }
-      .simple nav {
-        grid-template-columns: repeat(3, 140px);
-        grid-template-rows: 60px 60px; }
-        .simple nav .round {
-          width: 40px;
-          height: 40px; }
-      .simple nav a {
-        grid-template-columns: 90px 40px;
-        font-size: 18px; } }
+  grid-auto-flow: column;
+  color: #0f012a;
+  background-color: #e8eef5;
+  border-radius: 20px;
+  margin: 20px;
+  font-family: 'Open Sans', sans-serif; }
+.simple .header {
+  font-size: 36px;
+  font-weight: bold;
+  padding: 40px;
+  border-bottom: 3px solid white; }
+.simple li {
+  padding: 40px;
+  border-bottom: 3px solid white;
+  font-size: 26px;
+  font-weight: bolder; }
 
 .complex {
   display: grid;

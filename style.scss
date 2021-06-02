@@ -25,127 +25,36 @@ header a, header a:visited,header a:focus{
     text-decoration: underline;
 }
 .simple {
-    $color-gray: #4a4a4a;
-    $color-yellow: #fef8bc;
-    $color-green: #7eeedf;
-    $margin-base: 40px;
-
-
-    font-family: 'Open Sans', sans-serif;
-    padding: 90px 5%;
-    box-sizing: border-box;
-    display: grid;
-    grid-template-rows: repeat(3, auto);
-    grid-template-columns: 100%;
-    justify-content: center;
-    color: $color-gray;
-
-
-    h1 {
-        font-size: 32px;
-        margin: $margin-base 0;
-        line-height: 2em;
+    $color-blue: #e8eef5;
+    $color-dark: #0f012a;
+    @mixin borderandpaddings{
+        padding: 40px;
+        border-bottom: 3px solid white;
     }
-
-    nav {
-        margin: $margin-base 0;
+    .simple-container{
+        max-width: 500px;
         display: grid;
-        grid-template-rows: 100%;
-        grid-template-columns: repeat(6, 180px);
-        grid-auto-flow: row;
-        margin: $margin-base 0;
-
-
-        a, a:visited, a:focus {
-            text-decoration: none;
-            color: $color-gray;
-            font-weight: bolder;
-            font-size: 24px;
-            display: grid;
-            grid-template-rows: 100%;
-            grid-template-columns: 120px 50px;
-            grid-auto-flow: row;
-            align-items: center;
-
-        }
-        a span{
-            justify-self: end;
-        }
-
-
-
-        .round {
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            display: grid;
-            justify-items: center;
-            align-items: center;
-        }
-
-        .round.inactive {
-            display: none;
-        }
-
-        .round.yellow {
-            background-color: $color-yellow;
-        }
-
-        .round.green {
-            background-color: $color-green
-        }
+        grid-template-rows: repeat(4, auto);
+        grid-template-columns: 100%;
+        grid-auto-flow: column;
+        color: $color-dark;
+        background-color: $color-blue;
+        border-radius: 20px;
+        margin: 20px;
+        font-family: 'Open Sans', sans-serif;
+    }
+    .header{
+        font-size: 36px;
+        font-weight: bold;
+        @include borderandpaddings;
     }
 
-    footer {
-        margin: $margin-base 0;
-
-        h2 {
-            font-weight: bolder;
-        }
-
-        a, a:visited, a:focus {
-            text-decoration: none;
-            color: $color-gray;
-        }
-
-        .bold {
-            font-weight: bolder;
-            font-size: 24px;;
-        }
-
-        span {
-            margin: 0 10px 0 0;
-        }
+    li{
+        @include borderandpaddings;
+        font-size: 26px;
+        font-weight: bolder;
     }
 
-    @media only screen and (min-width: 800px) and (max-width: 1100px) {
-        nav{
-            grid-template-columns: repeat(6, 130px);
-            .round{
-                width: 40px;
-                height: 40px;
-            }
-        }
-        nav a{
-            grid-template-columns: 90px 40px;
-                font-size: 18px;
-            }
-    }
-    @media only screen and (min-width: 0px) and (max-width: 799px) {
-        padding: 90px 1%;
-        nav{
-            grid-template-columns: repeat(3, 140px);
-            grid-template-rows: 60px 60px;
-            .round{
-                width: 40px;
-                height: 40px;
-            }
-        }
-        nav a{
-            grid-template-columns: 90px 40px;
-            font-size: 18px;
-        }
-    }
 }
 
 .complex{
